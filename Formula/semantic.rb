@@ -5,21 +5,21 @@
 class Semantic < Formula
   desc "Zero-dependency semantic matching for accessibility tree elements"
   homepage "https://github.com/pinchtab/semantic"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pinchtab/semantic/releases/download/v0.1.0/semantic-darwin-amd64"
-      sha256 "341e228cf466ce7b7a1a80f94aea644caebec856d8dea5fd6de1d6924fb35bdd"
+      url "https://github.com/pinchtab/semantic/releases/download/v0.1.1/semantic-darwin-amd64"
+      sha256 "12fa08df7e337701c152614a7796f27d9ff23aa89856868a2db2ef49a284f839"
 
       define_method(:install) do
         bin.install Dir["semantic*"].first => "semantic"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pinchtab/semantic/releases/download/v0.1.0/semantic-darwin-arm64"
-      sha256 "1143ebbe5321f37ec45dea7fb6e86382a73f4e35ab8949451159b7410105ffbf"
+      url "https://github.com/pinchtab/semantic/releases/download/v0.1.1/semantic-darwin-arm64"
+      sha256 "7c20b812d372ef9dcee0261eb957974b500881077dfef87bf774db2d13922caf"
 
       define_method(:install) do
         bin.install Dir["semantic*"].first => "semantic"
@@ -29,15 +29,15 @@ class Semantic < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/semantic/releases/download/v0.1.0/semantic-linux-amd64"
-      sha256 "837ab4104e11978a5b1258287f33b80c35abb67ca11efa850307286885df0d06"
+      url "https://github.com/pinchtab/semantic/releases/download/v0.1.1/semantic-linux-amd64"
+      sha256 "086150775ecff9f0197e9410effc0e2a9bcbb67cdab972e9a4d75a81b28c03a5"
       define_method(:install) do
         bin.install Dir["semantic*"].first => "semantic"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/semantic/releases/download/v0.1.0/semantic-linux-arm64"
-      sha256 "3be8b19532284e66c6dd9224316571f2b4a7a5e1040567db91964bb0cce1093c"
+      url "https://github.com/pinchtab/semantic/releases/download/v0.1.1/semantic-linux-arm64"
+      sha256 "025c7c2669b43b048aac4af24945ee56bcfd0715951c00263c13dce5f8ea9ee7"
       define_method(:install) do
         bin.install Dir["semantic*"].first => "semantic"
       end
