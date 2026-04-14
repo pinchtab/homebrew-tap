@@ -5,21 +5,21 @@
 class Idpishield < Formula
   desc "Defense against Indirect Prompt Injection (IDPI) attacks for AI agents"
   homepage "https://github.com/pinchtab/idpishield"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.3/idpishield-darwin-amd64"
-      sha256 "a3a6cb75580048fe417df6db060e054a03a3b5ee8d2b3245aca56bee66829bf1"
+      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.4/idpishield-darwin-amd64"
+      sha256 "c596415ef46b99830db42ec3dfaf5a9eec8c5bcbd08def9eef77b00b9f275c4e"
 
       define_method(:install) do
         bin.install Dir["idpishield*"].first => "idpishield"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.3/idpishield-darwin-arm64"
-      sha256 "91f3b7144bb784a7936b4bde54470759cb27b7cedf5c24729f210b9891f72afd"
+      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.4/idpishield-darwin-arm64"
+      sha256 "c6e2cfdb8956e44eae283681f7da1741d56fa3debaf1ef2f4247b30afb60b940"
 
       define_method(:install) do
         bin.install Dir["idpishield*"].first => "idpishield"
@@ -29,15 +29,15 @@ class Idpishield < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.3/idpishield-linux-amd64"
-      sha256 "de69e7bab12ce4437e99610b03444403e04d9fc8feadb13f6b78908e3c20a75b"
+      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.4/idpishield-linux-amd64"
+      sha256 "565fc2ce00ecef4e8c5627635b811091c397fee81959955a99498ebef99e4af5"
       define_method(:install) do
         bin.install Dir["idpishield*"].first => "idpishield"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.3/idpishield-linux-arm64"
-      sha256 "125869d1aa94f7ca5de29599b6af91813fc044f41e9dd5dfa46bb0966faa6f6e"
+      url "https://github.com/pinchtab/idpishield/releases/download/v0.1.4/idpishield-linux-arm64"
+      sha256 "6b6713ba35b6a495cb1e0df65392aa6b6d5d13ff6ed7fb66251d806ebe162a51"
       define_method(:install) do
         bin.install Dir["idpishield*"].first => "idpishield"
       end
