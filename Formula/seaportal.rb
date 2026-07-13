@@ -5,21 +5,21 @@
 class Seaportal < Formula
   desc "HTTP-first web content extraction for AI agents: Markdown, accessibility snapshots, sitemap/feed parsing, and an MCP server"
   homepage "https://github.com/pinchtab/seaportal"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pinchtab/seaportal/releases/download/v0.1.1/seaportal-darwin-amd64"
-      sha256 "32e7bd113a70ac21da216a25dd2e08cd3e2c16b04a5ff37c1cca6010436604cb"
+      url "https://github.com/pinchtab/seaportal/releases/download/v0.2.0/seaportal-darwin-amd64"
+      sha256 "37d2aa993c2fe0ce019c67d399d7b410bec23ce1a7e0a4ca344aa673a7e49337"
 
       define_method(:install) do
         bin.install Dir["seaportal*"].first => "seaportal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pinchtab/seaportal/releases/download/v0.1.1/seaportal-darwin-arm64"
-      sha256 "2f4b2ff5ec4e8298d9dddd529aea1cd4d665b8419387c455273142b5dca7dadb"
+      url "https://github.com/pinchtab/seaportal/releases/download/v0.2.0/seaportal-darwin-arm64"
+      sha256 "1357d5393ee487edcf6423f3c5f5c43e669c3d1c7a380ab15e6603603f3d305f"
 
       define_method(:install) do
         bin.install Dir["seaportal*"].first => "seaportal"
@@ -29,15 +29,15 @@ class Seaportal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/seaportal/releases/download/v0.1.1/seaportal-linux-amd64"
-      sha256 "838d00a23634b231dc44feab02892cf903117e19ce5eb322b5d227386fa2d7b6"
+      url "https://github.com/pinchtab/seaportal/releases/download/v0.2.0/seaportal-linux-amd64"
+      sha256 "b1e738514a1abd9b892613de08fbd230fc3a3afdf356e3437fde47ecb3130432"
       define_method(:install) do
         bin.install Dir["seaportal*"].first => "seaportal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/seaportal/releases/download/v0.1.1/seaportal-linux-arm64"
-      sha256 "def30af59aaffb99ef9478bb9ef4a525d22bc4bafac7b5e2a9368953263b85d3"
+      url "https://github.com/pinchtab/seaportal/releases/download/v0.2.0/seaportal-linux-arm64"
+      sha256 "3ef93acc74eb820a1ce323333ed81a93d4f99e2c1dd9ce907135b8dc1e3d0b0f"
       define_method(:install) do
         bin.install Dir["seaportal*"].first => "seaportal"
       end
