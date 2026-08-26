@@ -5,21 +5,21 @@
 class Pinchtab < Formula
   desc "High-performance browser automation bridge and multi-instance orchestrator for AI agents"
   homepage "https://pinchtab.com"
-  version "0.15.1"
+  version "0.15.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.1/pinchtab-darwin-amd64"
-      sha256 "29f9a0ebf5ddead810bed5ad42a9a97e540e3a3339a9413a67f6f6911d0be364"
+      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.2/pinchtab-darwin-amd64"
+      sha256 "85579b0539167c0d9e9f1d79118c49846ad705a1c5081f70815422ba8ff002ea"
 
       define_method(:install) do
         bin.install Dir["pinchtab*"].first => "pinchtab"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.1/pinchtab-darwin-arm64"
-      sha256 "0d4df1655e1115c1d45b86d2c3c3ef9212b496195219e3415551c57dffb3e4d9"
+      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.2/pinchtab-darwin-arm64"
+      sha256 "304201bae3528024e2dc32e59391fc7bebd38ad3f8206df91ef876299c7b989c"
 
       define_method(:install) do
         bin.install Dir["pinchtab*"].first => "pinchtab"
@@ -29,15 +29,15 @@ class Pinchtab < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.1/pinchtab-linux-amd64"
-      sha256 "3f5ceaaf172e8c8c0276a0c8efa4009cb2484d60422e044a5fb21cf0577f893c"
+      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.2/pinchtab-linux-amd64"
+      sha256 "0bb4f97a1c92f94bcdbadffc39dc6985a4757c88a77876bbcb42142191e8202d"
       define_method(:install) do
         bin.install Dir["pinchtab*"].first => "pinchtab"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.1/pinchtab-linux-arm64"
-      sha256 "f2b0bfdf76d5e55ccc6a4d7e08bb934feffe930af6cede7a7403d046f2a47730"
+      url "https://github.com/pinchtab/pinchtab/releases/download/v0.15.2/pinchtab-linux-arm64"
+      sha256 "e3343f84d1fffd430821eaa5d509ad454418a09b516b07eff81f6bb5266052ff"
       define_method(:install) do
         bin.install Dir["pinchtab*"].first => "pinchtab"
       end
